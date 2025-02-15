@@ -238,5 +238,7 @@ class StartWindow(QWidget):
     def logout(self):
         """Clear local storage and logout the user"""
         self.settings.setValue("user_id", '')
+        self.settings.setValue("email", '')
+        self.settings.setValue("secret_key", '')
         self.close()
         self.main_window.show()
